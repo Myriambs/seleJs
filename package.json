@@ -1,0 +1,21 @@
+{
+  "name": "seleniumjavascript",
+  "version": "1.0.0",
+  "main": "first.js",
+  "scripts": {
+    "start": "node tests/mouseInteraction.js",
+  "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^137.0.0",
+    "selenium-webdriver": "^4.33.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3"
+  }
+}

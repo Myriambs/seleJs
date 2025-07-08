@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-08T17:46:46.519Z",
+    "end": "2025-07-08T17:46:53.452Z",
+    "duration": 6933,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bbaabe00-1b55-4174-a631-9b4ec75812e2",
+      "title": "",
+      "fullFile": "/home/meriam/Desktop/seleniumfreecodecamp/seleniumJavascript/tests/alerts.test.js",
+      "file": "/tests/alerts.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a2570864-6e9c-405d-aab6-7bfcf55e6ee9",
+          "title": "Amazon Page Test alert pop up",
+          "fullFile": "/home/meriam/Desktop/seleniumfreecodecamp/seleniumJavascript/tests/alerts.test.js",
+          "file": "/tests/alerts.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Amazon Page Test alert pop up\"",
+              "fullTitle": "Amazon Page Test alert pop up \"before all\" hook in \"Amazon Page Test alert pop up\"",
+              "timedOut": false,
+              "duration": 1349,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nconsole.log('Chrome driver initialized successfully!');",
+              "err": {},
+              "uuid": "c427a270-bc9a-4ee8-a245-33e669ea709b",
+              "parentUUID": "a2570864-6e9c-405d-aab6-7bfcf55e6ee9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Amazon Page Test alert pop up\"",
+              "fullTitle": "Amazon Page Test alert pop up \"after all\" hook in \"Amazon Page Test alert pop up\"",
+              "timedOut": false,
+              "duration": 127,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n  await driver.quit();\n  console.log('Driver quit successfully!');\n}",
+              "err": {},
+              "uuid": "4318d14d-86a7-4e7b-9fad-a204bb763744",
+              "parentUUID": "a2570864-6e9c-405d-aab6-7bfcf55e6ee9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should take a screenshot after clicking a button",
+              "fullTitle": "Amazon Page Test alert pop up should take a screenshot after clicking a button",
+              "timedOut": false,
+              "duration": 5450,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Screenshot after clicking the button\",\n  \"value\": \"/home/meriam/Desktop/seleniumfreecodecamp/seleniumJavascript/screenshots/doubleclick.png\"\n}",
+              "code": "await driver.get('https://demoqa.com/buttons');\n// ✅ Click the stable button\nconst button = await driver.findElement(By.id('doubleClickBtn'));\nawait button.click();\nconsole.log('Button clicked!');\n// ✅ Optional delay (not required)\nawait driver.sleep(1000);\n// ✅ Take screenshot and save it\nconst screenshot = await driver.takeScreenshot();\nconst screenshotPath = path.resolve('./screenshots/doubleclick.png');\nfs.writeFileSync(screenshotPath, screenshot, 'base64');\nconsole.log('Screenshot saved at:', screenshotPath);\n// ✅ Attach screenshot to Mochawesome report\naddContext(this, {\n  title: 'Screenshot after clicking the button',\n  value: screenshotPath,\n});\nconsole.log('Screenshot test completed successfully!');",
+              "err": {},
+              "uuid": "30a8f65e-9e11-4178-85f5-a55244ea0142",
+              "parentUUID": "a2570864-6e9c-405d-aab6-7bfcf55e6ee9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "30a8f65e-9e11-4178-85f5-a55244ea0142"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5450,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Import Statement
+javascriptconst {Builder,Browser,By,Key,until} = require('selenium-webdriver');
+This imports the necessary components from the Selenium WebDriver library:
+
+Builder: Creates and configures WebDriver instances
+Browser: Enum for different browser types
+By: Locator strategies to find elements on a page
+Key: Special keyboard keys (like RETURN/Enter)
+until: Wait conditions for explicit waits
+
