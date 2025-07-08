@@ -58,7 +58,7 @@ bashnpm install
 Install required packages:
 
 bashnpm install selenium-webdriver mocha mochawesome assert
-📁 Project Structure
+## 📁 Project Structure
 selenium-project/
 ├── .mocharc.js          # Mocha configuration
 ├── tests/
@@ -68,7 +68,7 @@ selenium-project/
 ├── screenshots/         # Auto-generated screenshots
 ├── mochawesome-report/  # Test reports (generated)
 └── package.json
-⚙️ Configuration
+## ⚙️ Configuration
 Mocha Configuration (.mocharc.js)
 javascriptmodule.exports = {
   reporter: 'mochawesome',
@@ -84,7 +84,7 @@ json{
   "mochawesome": "^7.x.x",
   "assert": "^2.x.x"
 }
-🚀 Running Tests
+## 🚀 Running Tests
 Run all tests:
 bashnpm test
 Run specific test file:
@@ -93,7 +93,7 @@ Run with specific reporter:
 bashnpx mocha --reporter mochawesome tests/**/*.js
 Run only active tests (skip .skip() tests):
 bashnpx mocha tests/**/*.js
-📝 Test Examples
+## 📝 Test Examples
 1. Basic Navigation & Element Interaction
 javascript// Amazon page navigation test
 await driver.get('https://www.amazon.in/');
@@ -141,7 +141,7 @@ await driver.manage().window().setRect({ width: 800, height: 600 });
 javascript// Send keys to element using actions
 const element = await driver.findElement(By.id('clickable'));
 await driver.actions().sendKeys(element, "Hello World!").perform();
-📸 Screenshots
+## 📸 Screenshots
 The project automatically captures screenshots in two scenarios:
 1. On Test Failure
 javascriptafterEach(async function () {
@@ -163,7 +163,7 @@ const screenshot = await driver.takeScreenshot();
 const screenshotPath = path.resolve('./screenshots/test-result.png');
 fs.writeFileSync(screenshotPath, screenshot, 'base64');
 Screenshots are saved to ./screenshots/ directory and automatically attached to HTML reports.
-📊 Reporting
+## 📊 Reporting
 This project uses Mochawesome for beautiful HTML test reports:
 
 Reports are generated in mochawesome-report/ directory
@@ -174,7 +174,7 @@ Provide pass/fail statistics
 View Reports
 After running tests, open:
 mochawesome-report/mochawesome.html
-🔧 Key Learning Points
+## 🔧 Key Learning Points
 1. Implicit vs Explicit Waits
 javascript// Implicit wait - applies to all element searches
 await driver.manage().setTimeouts({ implicit: 5000 });
@@ -203,7 +203,7 @@ const handles = await driver.getAllWindowHandles();
 await driver.switchTo().window(handles[1]); // Switch to new window
 await driver.close(); // Close current window
 await driver.switchTo().window(handles[0]); // Switch back
-📁 File Structure Details
+## 📁 File Structure Details
 selenium-project/
 ├── .mocharc.js              # Mocha test configuration
 ├── tests/
@@ -239,7 +239,7 @@ Check network connectivity
 The project automatically creates screenshots/ folder
 Ensure write permissions in project directory
 
-🔄 Test Execution Flow
+## 🔄 Test Execution Flow
 
 Before Hook: Initialize Chrome driver
 Test Execution: Run individual test cases
@@ -247,7 +247,7 @@ After Each: Capture screenshot if test fails
 After Hook: Quit driver and cleanup
 Report Generation: Create HTML report with screenshots
 
-📋 Best Practices Demonstrated
+## 📋 Best Practices Demonstrated
 
 ✅ Proper error handling with try/catch blocks
 ✅ Driver cleanup in finally blocks
@@ -257,7 +257,7 @@ Report Generation: Create HTML report with screenshots
 ✅ Organized test structure with hooks
 ✅ Integration with reporting tools
 
-🎯 Learning Objectives Covered
+## 🎯 Learning Objectives Covered
 This project demonstrates:
 
 Basic Selenium WebDriver setup and configuration
